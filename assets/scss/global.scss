@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: #000027;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-height: 100vh;
+  background-color: #f1f1f1;
+}
+
+// New Styles #######################################
+
+// NavBar
+.nabar_wrapper {
+  width: 100%;
+  height: 65px;
+  background-color: #1d252d;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  display: flex;
+  flex-wrap: inherit;
+  justify-content: space-between;
+  font-family: Sansation_Light, Open Sans, Arial, Helvetica, sans-serif;
+  height: 65px;
+  padding: 1.2rem;
+  position: fixed;
+  top: 0;
+  transition: all 0.35s ease;
+  width: 100%;
+  z-index: 50;
+  .logo_wrapper {
+    color: var(--bs-navbar-brand-color);
+    font-size: var(--bs-navbar-brand-font-size);
+    margin-right: var(--bs-navbar-brand-margin-end);
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+    padding-top: var(--bs-navbar-brand-padding-y);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    .nav-item {
+      list-style: none;
+      color: white;
+      background: none;
+      border: 0;
+      text-decoration: none;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+    }
+  }
+  .more {
+    color: white;
+  }
+}
+
+// Banner
+.banner_wrapper {
+  padding-top: 5rem;
+  width: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  background-image: url('https://enata.com/images/careers/careers_w.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  h3 {
+    min-width: 50%;
+    max-width: 50%;
+    // margin: 0 auto 30px auto;
+    color: #ffffff;
+    text-align: center;
+    // font-family: 'Playfair Display', 'Libre Bakserville', Times, serif;
+    font-family: Times, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 2.8rem;
+  }
+  span {
+    margin-bottom: 20px;
+    color: #929291;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+  }
+  ul {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 50%;
+    li {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Card
+.card_wrapper {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  min-height: 50rem;
+  position: absolute;
+  top: 23rem;
+  left: 4.5%;
+  // padding: 3rem;
+
+  // Filter
+  .filter_wrapper {
+    padding: 3rem;
+    padding-bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+  }
+  .chip_wrapper {
+    padding: 0 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  // Jobs Cards
+  .jobs_card_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .job_card {
+      width: 95%;
+      margin: auto;
+      padding: 20px 20px 20px 24px;
+      color: #617482;
+      border: 1px solid #dedede;
+      border-radius: 4px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      color: inherit;
+      border-color: #dedede;
+      background-color: white;
+      -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.065);
+      box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.065);
+      &::before {
+        content: '';
+        width: 4px;
+        display: block;
+        background: #dedede;
+        border-radius: 4px 0 0 4px;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        -webkit-transition: background-color 0.12s linear;
+        transition: background-color 0.12s linear;
+      }
+    }
+  }
+
+  // Job Details
+  .job_details_wrapper {
+    width: 100%;
+    padding: 2rem;
+    .share_job {
+      .share_chip {
+        padding: 6px;
+        border-radius: 6px;
+        border: .5px solid #e7e7e7;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-right: 6px;
+      }
+    }
+    .job_details_data_wrapper {
+      .apply_now_box {
+        min-width: 20%;
+        max-width: 20%;
+        padding: 1rem;
+        border: 1px solid #dddd;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .apply_now_form {
+        min-width: 50%;
+        max-width: 50%;
+        min-height: 100%;
+        max-height: 100%;
+        border: 1px solid #dddd;
+        border-radius: 10px;
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        margin-left: 1rem;
+        .form_wrapper {
+
+        }
+      }
+    }
+  }
+}
+
+// New Styles #######################################
+
+// main styles
+.main_wrapper {
+  height: 100%;
+  // padding: 3rem !important;
+  // background-image: linear-gradient(60deg, #FFFFFF, #0099DA);
+
+  background-color: rgb(241, 241, 241);
+}
+.carrer_banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-image: url('https://enata.com/images/careers/careers_m.jpg');
+  width: 100%;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  h3 {
+    max-width: 960px;
+    margin: 0 auto 30px auto;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Playfair Display', 'Libre Bakserville', Times, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 2.8rem;
+  }
+  span {
+    margin-bottom: 20px;
+    color: #929291;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+  }
+  ul {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    width: 80%;
+    li {
+      width: 100%;
+      height: 60px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        opacity: 1;
+      }
+    }
+  }
+}
+.carrer_section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+}
+.options_cards_row {
+  height: 100%;
+}
+.services_cards_row {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.my_row {
+  height: 100%;
+  // background-image: url('../../static/logo_in_background.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.right_col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  // height: 100%;
+}
+.left_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 !important;
+  margin: 0 !important;
+  .logo {
+    height: 48.95px;
+    width: 110.22px;
+  }
+}
+.welcome_victor_art {
+  margin-left: 186px;
+  max-width: 375.85px;
+}
+
+// Utility classes
+.option_card_subtext {
+  font: normal normal medium 13px/18px Manrope !important;
+  color: #585858 !important;
+  letter-spacing: 0px !important;
+}
+.my_divider {
+  margin: 0.5rem 0;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 16px !important;
+}
+
+// Heading, Titles and Subtitles
+.main_heading {
+  font: normal normal 600 36px/49px Manrope !important;
+  letter-spacing: 0px;
+  color: #003867;
+}
+.main_subHeading {
+  text-align: left;
+  font: normal normal normal 18px/24px Manrope;
+  letter-spacing: 0px;
+  color: #000027;
+}
+.main_title {
+  text-align: left !important;
+  font: normal normal 600 26px/36px Manrope !important;
+  letter-spacing: 0px !important;
+  color: #000027 !important;
+  text-align: left;
+}
+.main_subtitle {
+  text-align: left !important;
+  font: normal normal normal 16px/22px Manrope !important;
+  letter-spacing: 0px !important;
+  color: #000027 !important;
+}
+.title_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+// Buttons
+.primary_btn {
+  text-align: center !important;
+  font: normal normal 600 14px/19px Manrope !important;
+  letter-spacing: 0px !important;
+  color: #003867 !important;
+  text-transform: capitalize !important;
+  border-radius: 7px !important;
+}
+.secondary_btn {
+}
+
+// Upload Dialogs
+.main_upload_dialog {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.upload_dialog_card {
+  padding: 0 !important;
+  margin: 0 !important;
+  padding: 2rem !important;
+  background: #ffffff 0% 0% no-repeat padding-box !important;
+}
+.upload_dialog_card_title {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  max-height: fit-content;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.upload_dialog_card_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.upload_dialog_card_actions {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  margin: 0 !important;
+  span {
+    text-align: left !important;
+    font: normal normal medium 13px/18px Manrope !important;
+    letter-spacing: 0px !important;
+    color: #747474 !important;
+  }
+}
+.uploading_dialog_h4_title {
+  font: normal normal bold 18px/24px Manrope !important;
+  color: #000027 !important;
+  text-align: left !important;
+  letter-spacing: 0px !important;
+}
+.dialog_primary_btn {
+  min-height: 50px !important;
+  max-height: 50px !important;
+  text-align: center !important;
+  border-radius: 10px !important;
+  span {
+    font: normal normal medium 16px/22px Manrope !important;
+    letter-spacing: 0px !important;
+    color: #ffffff !important;
+  }
+}
+
+// Global Scroll Bar
+.scroll {
+  overflow-y: auto;
+  // overflow-x: hidden;
+  // background: rgb(255, 255, 255);
+}
+.noShadowButtonClick::before {
+  background-color: transparent !important;
+}
+
+.scroll::-webkit-scrollbar-track {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 2px 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px #000;
+  background-color: #ffffff;
+  border: 1px solid #000;
+}
+
+.webkit-scrollbar-track {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 2px 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.webkit-scrollbar {
+  width: 8px;
+}
+
+.webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar {
+  width: 5px !important; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: none; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(228, 228, 228); /* color of the scroll thumb */
+  border-radius: 15px; /* roundness of the scroll thumb */
+  border: none; /* creates padding around scroll thumb */
+}

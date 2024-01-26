@@ -1,0 +1,60 @@
+.thank_you_col {
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    .thank_you_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 40rem;
+        height: 18rem;
+        background: #FFFFFF 0% 0% no-repeat padding-box !important;
+        border-radius: 15px;
+        padding: 1.5rem;
+        .thank_you_title {
+            font: normal normal bold 28px/38px Manrope;
+            letter-spacing: 0px;
+            color: #0A94FF;
+        }
+        .thank_you_subtext {
+            text-align: center;
+            font: normal normal medium 16px/22px Manrope;
+            letter-spacing: 0px;
+            color: #000027;
+        }
+        .thank_you_request_data_card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 90%;
+            background-color: #ebf6ff !important; 
+            border-radius: 15px;
+            padding: 1.5rem !important;
+            gap: 0.5rem;
+        }
+    }
+}
+.thank_you_footer_text {
+    margin-left: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    @media screen and (min-width: 1800px) {
+        margin-left: 39rem;
+    }
+}
+.thank_you_victor_art{
+    position: absolute;
+    bottom: 7.5rem;
+}
