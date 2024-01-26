@@ -199,6 +199,7 @@
                 x-large
                 color="blue"
                 elevation="0"
+              @click="handleSubmitForm()"
                 class="ma-0 pa-0 px-15 py-2 mb-2 mt-0"
                 ><span class="text-white">Apply Now</span></v-btn
               >
@@ -217,6 +218,12 @@ import JobsCard from '@/components/JobsCard.vue'
 export default {
   components: { TopFilter, JobsCard },
   props: {},
+  methods: {
+    handleSubmitForm() {
+      console.log('form submitted');
+      this.$router.push('./thank-you')
+    },
+  }
 }
 </script>
 
