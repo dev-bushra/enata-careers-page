@@ -15,6 +15,23 @@ body {
 
 // New Styles #######################################
 
+// Global Classes
+.text-white { color: white !important; }
+.text-black { color: black !important; }
+.text-primary { color: #1d252d !important; }
+.text-secondary { color: #a7acb1 !important; }
+
+.font-light { font-weight: light !important; }
+.font-normal { font-weight: normal !important; }
+.font-bold { font-weight: bold !important; }
+.font-black { font-weight: black !important; }
+
+.text-xs { font-size: 10px !important; }
+.text-sm { font-size: 12px !important; }
+.text-md { font-size: 14px !important; }
+.text-lg { font-size: 18px !important; }
+.text-xlg { font-size: 20px !important; }
+
 // NavBar
 .nabar_wrapper {
   width: 100%;
@@ -210,13 +227,14 @@ body {
       .apply_now_box {
         min-width: 20%;
         max-width: 20%;
-        padding: 1rem;
+        padding: 2.5rem 1rem;
         border: 1px solid #dddd;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 2rem;
+        margin-left: 1rem;
       }
       .apply_now_form {
         min-width: 50%;

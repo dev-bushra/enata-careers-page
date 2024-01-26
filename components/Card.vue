@@ -7,32 +7,10 @@
     <!-- Job Details -->
     <div class="job_details_wrapper">
       <!-- Share Top part -->
-      <div class="share_job d-flex aling-center justify-space-between w-full">
-        <div class="d-flex align-center">
-          <div class="share_chip">
-            <v-icon small color="gray">mdi-share-variant-outline</v-icon>
-            <span>Copy Link</span>
-          </div>
-          <div class="share_chip">
-            <v-icon small color="gray">mdi-linkedin</v-icon>
-            <span>Share</span>
-          </div>
-          <div class="share_chip">
-            <v-icon small color="gray">mdi-facebook</v-icon>
-            <span>Share</span>
-          </div>
-          <div class="share_chip">
-            <v-icon small color="gray">mdi-twitter</v-icon>
-            <span>Share</span>
-          </div>
-        </div>
-        <span class="blue-grey lighten-5 pa-2 px-4 rounded">Marketing</span>
-      </div>
-      <v-divider class="mt-5 mb-10" />
+      <ShareJobBar />
 
       <!-- Job Details Data -->
       <div class="job_details_data_wrapper w-full d-flex flex-column">
-        <!-- job title -->
         <div class="job_details_data_title">
           <h2 class="display-1">
             Canva is Hiring a Principal Product Marketing Manager, Ecosystem
@@ -46,9 +24,7 @@
             "
           />
         </div>
-
         <div class="d-flex align-start flex-row w-full">
-          <!-- JD -->
           <div class="JD_wrapper">
             <h4>What you’d be doing in this role:</h4>
             <span>
@@ -62,7 +38,6 @@
               on interval maintenance programs; Verify cutters stock, cutters
               condition.
             </span>
-
             <h4 class="mt-10">Mechanical Production duties:</h4>
             <ul>
               <li>
@@ -82,7 +57,6 @@
               </li>
               <li>Verify cutters stock, cutters condition.</li>
             </ul>
-
             <h4 class="mt-10">Mechanical Production duties:</h4>
             <ul>
               <li>
@@ -98,113 +72,10 @@
                 warning in case of discrepancies.
               </li>
             </ul>
-
-            <v-btn
-              large
-              small
-              x-large
-              color="blue"
-              elevation="0"
-              class="ma-0 pa-0 px-15 py-2 mb-7 mt-10"
-              ><span class="text-white">Apply Now</span></v-btn
-            >
           </div>
 
-          <!-- Apply now Box -->
-          <!-- <div class="apply_now_box flex-column">
-            <v-btn
-              large
-              small
-              x-large
-              color="blue"
-              elevation="0"
-              class="ma-0 pa-0 px-15 py-2 mb-7"
-              ><span class="text-white">Apply Now</span></v-btn
-            >
-            <div class="d-flex align-center flex-column text-center">
-              <v-img
-                src="https://authenticjobs.com/wp-content/uploads/job-manager-uploads/company_logo/2023/10/Tanuki_white_square.png"
-                max-width="65px"
-                max-hight="65px"
-              />
-              <div class="d-flex flex-column">
-                <h5>Product Design</h5>
-                <span class="">San Francisco, California</span>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="apply_now_form d-flex flex-column">
-            <div class="d-flex align-start justify-space-between">
-              <div class="">
-                <h3>Submit your Application</h3>
-                <span>Let fill the information below</span>
-              </div>
-              <v-icon small>mdi-close</v-icon>
-            </div>
-            <div class="form_wrapper">
-              <div class="d-flex">
-                <v-text-field label="First Name" outlined dense></v-text-field>
-                <v-text-field
-                  class="ml-1"
-                  label="Last Name"
-                  outlined
-                  dense
-                ></v-text-field>
-              </div>
-              <div class="d-flex">
-                <v-text-field label="Email" outlined dense></v-text-field>
-                <v-text-field
-                  class="ml-1"
-                  label="Phone"
-                  outlined
-                  dense
-                ></v-text-field>
-              </div>
-              <div class="d-flex">
-                <v-text-field label="Nationality" outlined dense></v-text-field>
-                <v-text-field
-                  class="ml-1"
-                  label="Exacted Salary"
-                  outlined
-                  dense
-                ></v-text-field>
-              </div>
-              <div class="d-flex flex-column">
-                <v-file-input
-                  outlined
-                  prepend-inner-icon="mdi-paperclip"
-                  prepend-icon=""
-                  placeholder="Upload your resume"
-                  dense
-                ></v-file-input>
-                <v-file-input
-                  outlined
-                  prepend-inner-icon="mdi-paperclip"
-                  prepend-icon=""
-                  placeholder="Upload your photo"
-                  class="ml-1"
-                  dense
-                ></v-file-input>
-              </div>
-              <v-textarea
-                outlined
-                name="input-7-4"
-                label="Tell us more about yourself"
-              ></v-textarea>
-
-              <v-btn
-                large
-                small
-                x-large
-                color="blue"
-                elevation="0"
-              @click="handleSubmitForm()"
-                class="ma-0 pa-0 px-15 py-2 mb-2 mt-0"
-                ><span class="text-white">Apply Now</span></v-btn
-              >
-            </div>
-          </div>
+          <ApplyNowBox v-if="!applicationForm" @OpenApplicationForm="applicationForm=true" />
+          <ApplicationForm v-if="applicationForm" @CloseApplicationForm="applicationForm=false" />
         </div>
       </div>
     </div>
@@ -214,10 +85,18 @@
 <script>
 import TopFilter from '@/components/TopFilter.vue'
 import JobsCard from '@/components/JobsCard.vue'
+import ApplyNowBox from '@/components/ApplyNowBox.vue'
+import ApplicationForm from '@/components/ApplicationForm.vue'
+import ShareJobBar from '@/components/ShareJobBar.vue'
 
 export default {
-  components: { TopFilter, JobsCard },
+  components: { TopFilter, JobsCard, ApplyNowBox, ApplicationForm, ShareJobBar },
   props: {},
+  data() {
+    return {
+      applicationForm: false,
+    }
+  },
   methods: {
     handleSubmitForm() {
       console.log('form submitted');
