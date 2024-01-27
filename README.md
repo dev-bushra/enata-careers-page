@@ -1,17 +1,13 @@
 # ATS Recruiting Application
-AST recruiting application helps clients to find the perfect fit for the position they looking for by taking all the specific details for the position.
+A career page supported by an Applicant Tracking System (ATS) assists job seekers in finding their ideal positions within a company. This platform offers a user-friendly interface for candidates to explore available opportunities, submit applications, and engage with the hiring process efficiently. Key features include comprehensive job listings, search and filter options, detailed job descriptions, seamless application submission, user accounts for application tracking, mobile-friendly design, social media integration, automatic application screening, a communication portal for updates, and robust analytics for continuous improvement in the recruitment process. The ATS-integrated career page streamlines the candidate experience, making it a convenient and effective tool for job seekers and hiring teams alike.
 <br/>
 
 # Live Link
-https://dev-bushra.github.io/ats-recruiting-app/
+https://dev-bushra.github.io/enata-careers-page/
 <br/>
 
 # Screens
-<img src='/screens/screen-1.png' />
-<img src='/screens/screen-2.png' />
-<img src='/screens/screen-3.png' />
-<img src='/screens/screen-4.png' />
-<img src='/screens/screen-5.png' />
-<img src='/screens/screen-6.png' />
-<img src='/screens/screen-7.png' />
+<img src='/screens/opening-job.png' />
+<img src='/screens/job-details.png' />
+<img src='/screens/job-details-form.png' />
 <br/>
