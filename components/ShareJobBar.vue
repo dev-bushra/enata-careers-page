@@ -19,7 +19,7 @@
           <span>Share</span>
         </div>
       </div>
-      <span class="blue-grey lighten-5 pa-2 px-4 rounded">Marketing</span>
+      <span class="blue-grey lighten-5 pa-2 px-4 rounded font_thin">Marketing</span>
     </div>
     <v-divider class="mt-5 mb-10" />
   </div>

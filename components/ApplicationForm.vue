@@ -11,7 +11,7 @@
       <div class="d-flex">
         <v-text-field label="First Name" outlined dense></v-text-field>
         <v-text-field
-          class="ml-1"
+          class="ml-3"
           label="Last Name"
           outlined
           dense
@@ -19,12 +19,12 @@
       </div>
       <div class="d-flex">
         <v-text-field label="Email" outlined dense></v-text-field>
-        <v-text-field class="ml-1" label="Phone" outlined dense></v-text-field>
+        <v-text-field class="ml-3" label="Phone" outlined dense></v-text-field>
       </div>
       <div class="d-flex">
         <v-text-field label="Nationality" outlined dense></v-text-field>
         <v-text-field
-          class="ml-1"
+          class="ml-3"
           label="Exacted Salary"
           outlined
           dense

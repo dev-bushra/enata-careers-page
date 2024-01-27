@@ -7,7 +7,7 @@
         max-hight="65px"
       />
       <div class="d-flex flex-column">
-        <h5 class="font-black text-lg mt-5 mb-1">Product Design</h5>
+        <h5 class="font-black text-lg mt-5 mb-1">Product Designer</h5>
         <span class="font-light text-sm text-secondary">San Francisco, California</span>
       </div>
     </div>
