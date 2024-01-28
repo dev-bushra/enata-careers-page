@@ -31,41 +31,35 @@ export default {
     prefetch: true,
     preconnect: true,
     preload: true,
-    useStylesheet: true
+    useStylesheet: true,
   },
 
   // ** VUETIFY CONFIGURATIONS
-    vuetify: {
-      customVariables: ['~/assets/scss/variables.scss'],
-      defaultAssets: {
-        font: {
-          family: 'Manrope',
-          size: 14,
-        },
-        icons: 'fa'
+  vuetify: {
+    customVariables: ['~/assets/scss/variables.scss'],
+    defaultAssets: {
+      font: {
+        family: 'Manrope',
+        size: 14,
       },
-      
-      treeShake: true,
+      icons: 'fa',
     },
-  
+
+    treeShake: true,
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/scss/global'
-  ],
+  css: ['@/assets/scss/global'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/plugins/aos', mode: 'client' },
-  ],
+  plugins: [{ src: '~/plugins/aos', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    // '@nuxtjs/vuetify',
     '@nuxtjs/svg',
     '@nuxtjs/google-fonts',
   ],
@@ -84,7 +78,8 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    // customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/scss/variables.scss'],
     theme: {
       dark: false,
       themes: {
