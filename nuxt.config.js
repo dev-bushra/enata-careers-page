@@ -99,7 +99,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: null,
-    // publicDir: 'dist',
-    publicDir: 'static',
+    publicDir: 'dist',
+    // publicDir: 'static',
   },
 }
