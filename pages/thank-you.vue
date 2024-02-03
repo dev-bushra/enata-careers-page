@@ -3,9 +3,9 @@
     <Navbar />
     <v-container fluid class="thank_wrapper">
         <v-row class="services_cards_row">
-            <img class="logo align-self-start" src="/enata-logo.svg" alt="logo" data-aos="fade-out">
+            <img class="logo align-self-start" src="/enata-logo.svg" alt="logo" >
             <v-col cols="12" class="thank_you_col">
-                <div class="thank_you_card"  data-aos="fade-down">
+                <div class="thank_you_card"  >
                     <h3 class="thank_you_title">Thank you!</h3>
                     <span class="thank_you_subtext mt-2 mb-8">Please select from one of the following options below</span>
                     <div class="thank_you_request_data_card">
@@ -16,7 +16,7 @@
             </v-col>
             <img class="thank_you_victor_art" src="/images/thank_you_victor_art.svg" alt="thank_you_victor_art">
             <div class="powered_by_logo d-flex ma-auto">
-                <div class="thank_you_footer_text" data-aos="fade-up">
+                <div class="thank_you_footer_text" >
                     <h4 class="font-weight-bold">Visit our website</h4>
                     <span class="font-weight-light">For more information about any of our other services</span>
                     <span class="mt-3 px-5 py-2 white blue--text font-weight-light rounded-lg">https://www.enata.com/</span> 
@@ -29,8 +29,6 @@
 </template>
 
 <script>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import Banner from '../components/Banner.vue'

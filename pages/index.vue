@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import Banner from '../components/Banner.vue'
