@@ -3,7 +3,7 @@ A career page supported by an Applicant Tracking System (ATS) assists job seeker
 <br/>
 
 # Live Link
-https://dev-bushra.github.io/enata-careers-page/
+https://carrer-page-ux.vercel.app/
 <br/>
 
 # Screens
